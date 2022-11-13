@@ -13,7 +13,8 @@ raw_data_path = os.path.join(RAW_DATA_DIR, 'heart.csv')
 
 # Read dataset
 cwd = os.getcwd()
-#data = pd.read_csv(f'{cwd}heart.csv', sep=",")
+print(cwd)
+data = pd.read_csv(raw_data_path, sep=",")
 
 # Drop useless variables
 X = data.drop(['target'], axis='columns')
