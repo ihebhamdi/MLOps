@@ -1,5 +1,4 @@
 import os
-import csv
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -7,12 +6,12 @@ import pickle
 
 
 # Set path for the input
-
+RAW_DATA_DIR = os.environ["RAW_DATA_DIR"]
+RAW_DATA_FILE = os.environ["RAW_DATA_FILE"]
+raw_data_path = os.path.join(RAW_DATA_DIR, RAW_DATA_FILE)
 
 # Read dataset
-cwd = os.getcwd()
-print(cwd)
-data = pd.read_csv('/home/vagrant/raw_data/heart.csv', sep=",")
+data = pd.read_csv(r"/home/vagrant/raw_data/heart.csv", sep=",")
 
 # Drop useless variables
 X = data.drop(['target'], axis='columns')
