@@ -28,9 +28,9 @@ pipeline {
         }
         stage('Test stage') {
               steps {
-                    bat 'docker container exec model python3 train.py'
-                    bat 'docker container exec model python3 test.py'
-                    bat 'docker container exec model cat /home/jovyan/results/train_metadata.json /home/jovyan/results/test_metadata.json' 
+                    bat 'docker exec model python3 train.py'
+                    bat 'docker exec model python3 test.py'
+                    bat 'docker exec model cat /home/jovyan/results/train_metadata.json /home/jovyan/results/test_metadata.json' 
                     bat 'docker rm -f model'
                   }
                }
