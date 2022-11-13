@@ -12,7 +12,8 @@ RAW_DATA_FILE = os.environ["RAW_DATA_FILE"]
 raw_data_path = os.path.join(RAW_DATA_DIR, 'heart.csv')
 
 # Read dataset
-data = pd.read_csv(raw_data_path, sep=",")
+cwd = os.getcwd()
+data = pd.read_csv(f'{cwd}/heart.csv', sep=",")
 
 # Drop useless variables
 X = data.drop(['target'], axis='columns')
