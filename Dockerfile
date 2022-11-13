@@ -15,10 +15,10 @@ RUN yum install -y jq
 RUN mkdir model raw_data processed_data results
 
 
-ENV RAW_DATA_DIR=/home/vagrant/raw_data
-ENV PROCESSED_DATA_DIR=/home/vagrant/processed_data
-ENV MODEL_DIR=/home/vagrant/model
-ENV RESULTS_DIR=/home/vagrant/results
+ENV RAW_DATA_DIR=/var/lib/jenkins/workspace/MLOps/raw_data
+ENV PROCESSED_DATA_DIR=/var/lib/jenkins/workspace/MLOps/processed_data
+ENV MODEL_DIR=/var/lib/jenkins/workspace/MLOps/model
+ENV RESULTS_DIR=/var/lib/jenkins/workspace/MLOps/results
 ENV RAW_DATA_FILE=heart.csv
 
 
