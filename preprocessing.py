@@ -11,7 +11,7 @@ RAW_DATA_FILE = os.environ["RAW_DATA_FILE"]
 raw_data_path = os.path.join(RAW_DATA_DIR, RAW_DATA_FILE)
 
 # Read dataset
-data = pd.read_csv('/var/lib/jenkins/workspace/MLOps/heart.csv', sep=",")
+data = pd.read_csv(raw_data_path, sep=",")
 
 # Drop useless variables
 X = data.drop(['target'], axis='columns')
