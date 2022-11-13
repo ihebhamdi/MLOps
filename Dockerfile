@@ -4,6 +4,8 @@ FROM fedora:34
 RUN yum -y install python3-pip
 RUN pip3 install joblib
 RUN pip3 install pandas
+RUN pip3 install -U scikit-learn scipy matplotlib
+RUN pip install pickle5
 
 
 USER root
