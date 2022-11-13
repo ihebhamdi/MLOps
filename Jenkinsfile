@@ -13,7 +13,7 @@ pipeline {
           stage('Building docker container') {
             steps {
                   sh 'docker build -t heartdisease-model .'
-                  sh 'docker run -d --name model heartdisease-model'
+                  sh 'docker run -t -d --name model heartdisease-model'
                }
            }
             stage('Preprocessing stage') {
