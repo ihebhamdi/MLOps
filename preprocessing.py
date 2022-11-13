@@ -7,14 +7,14 @@ import pickle
 
 
 # Set path for the input
-RAW_DATA_DIR = os.environ["RAW_DATA_DIR"]
-RAW_DATA_FILE = os.environ["RAW_DATA_FILE"]
+RAW_DATA_DIR = os.environ['/home/vagrant/raw_data']
+RAW_DATA_FILE = os.environ['/home/vagrant/raw_data/heart.csv']
 raw_data_path = os.path.join(RAW_DATA_DIR, 'heart.csv')
 
 # Read dataset
 cwd = os.getcwd()
 print(cwd)
-data = pd.read_csv(raw_data_path, sep=",")
+data = pd.read_csv('/home/vagrant/raw_data/heart.csv', sep=",")
 
 # Drop useless variables
 X = data.drop(['target'], axis='columns')
