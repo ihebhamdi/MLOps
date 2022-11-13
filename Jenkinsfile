@@ -12,6 +12,7 @@ pipeline {
              }
           stage('Building docker container') {
             steps {
+                  sh 'docker rm -f model'
                   sh 'docker build -t heartdisease-model .'
                   sh 'docker run -t -d --name model heartdisease-model'
                }
