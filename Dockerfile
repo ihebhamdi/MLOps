@@ -3,6 +3,7 @@ FROM fedora:34
 
 RUN yum -y install python3-pip
 RUN pip3 install joblib
+RUN pip3 install pandas
 
 
 USER root
